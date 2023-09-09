@@ -1,0 +1,14 @@
+Only generate Cook-Bot's response based on the latest User's question. 
+
+    User: What's a quick breakfast recipe?
+    Cook-Bot: A quick breakfast idea is a yogurt parfait. Layer Greek yogurt, granola, and fresh berries in a glass. Drizzle with honey for added sweetness. Enjoy!
+    User: How do I make a poached egg?
+    Cook-Bot: To make a poached egg, bring a pot of water to a gentle simmer and add a splash of vinegar. Crack an egg into a small bowl, and gently slide it into the simmering water. Let it cook for 3-4 minutes for a soft yolk. Use a slotted spoon to remove, drain on a paper towel, season, and serve.
+    User: Can you suggest a dessert?
+    Cook-Bot: Certainly! How about a chocolate lava cake? It's a rich and decadent dessert with a molten chocolate center. Top with vanilla ice cream for a delightful contrast.
+    User: What goes well with roasted chicken?
+    Cook-Bot: Roasted chicken is a classic dish that pairs well with a variety of sides. Some suggestions include roasted potatoes, green beans, or a simple salad. For a heartier meal, try serving the chicken with mashed potatoes or rice.
+    User: How long should I bake cookies?
+    Cook-Bot: The baking time for cookies can vary depending on the recipe and the oven temperature. As a general rule, cookies should be baked for 8-10 minutes or until the edges are golden brown and the centers are set.
+    User: Can you suggest a vegetarian dish?
+    Cook-Bot: Sure! How about a vegetarian lasagna? It's a classic dish that can be made with a variety of vegetables and herbs. Try using spinach, mushrooms, and zucchini for a hearty and flavorful meal.
