@@ -1,3 +1,4 @@
+import argparse
 from transformers import AutoTokenizer
 import transformers
 import torch
@@ -24,44 +25,79 @@ prompt = """Only generate Cook-Bot's response based on the latest User's questio
     User: {user_request}
     Cook-Bot:"""
 
-# user_request = "Can you suggest a vegetarian dish?"
-user_request = "How do I cook Coq au Vin?"
-formatted_prompt = prompt.format(user_request=user_request)
+def get_cookbot_response(user_request):
+    formatted_prompt = prompt.format(user_request=user_request)
 
-sequences = pipeline(
-    # 'I liked "Breaking Bad" and "Band of Brothers". Do you have any recommendations of other shows I might like?\n',
-    # prompt,
-    formatted_prompt,
-    do_sample=True,
-    top_k=10,
-    num_return_sequences=1,
-    # eos_token_id=tokenizer.eos_token_id,
-    max_length=1000,
-)
+    sequences = pipeline(
+        formatted_prompt,
+        do_sample=True,
+        top_k=10,
+        num_return_sequences=1,
+        max_length=1000,
+    )
 
-text = sequences[0]['generated_text']
-print(f"{text=}")
-print("====================================")
-# Extract Cook-Bot's response based on the user_request
-try:
-    # Find the position of the user_request
-    user_pos = text.find(user_request)
-    
-    # If user_request is found, find the corresponding "Cook-Bot:" response right after it
-    if user_pos != -1:
-        cookbot_pos = text.find("Cook-Bot:", user_pos)
+    text = sequences[0]['generated_text']
+
+    try:
+        # Find the position of the user_request
+        user_pos = text.find(user_request)
         
-        # Extract the response until the next "User:" or end of the string
-        next_user_pos = text.find("User:", cookbot_pos)
-        
-        if next_user_pos != -1:
-            cookbot_response = text[cookbot_pos + 9:next_user_pos].strip()  # +9 to skip "Cook-Bot:"
+        # If user_request is found, find the corresponding "Cook-Bot:" response right after it
+        if user_pos != -1:
+            cookbot_pos = text.find("Cook-Bot:", user_pos)
+            
+            # Extract the response until the next "User:" or end of the string
+            next_user_pos = text.find("User:", cookbot_pos)
+            
+            if next_user_pos != -1:
+                cookbot_response = text[cookbot_pos + 9:next_user_pos].strip()  # +9 to skip "Cook-Bot:"
+            else:
+                cookbot_response = text[cookbot_pos + 9:].strip()
+            
+            return cookbot_response
         else:
-            cookbot_response = text[cookbot_pos + 9:].strip()
-        
-        print(f"Cook-Bot's Response: {cookbot_response}")
-    else:
-        print("User request not found in the generated text.")
+            return "Sorry, I couldn't understand the request."
 
-except Exception as e:
-    print(f"Error: {e}")
+    except Exception as e:
+        return f"Error: {e}"
+def interactive_chat():
+    print("Welcome to Cook-Bot! Ask your cooking questions and I'll try to help.")
+    print("Type 'exit' anytime to end the chat.\n")
+    
+    while True:
+        user_request = input("User: ").strip()
+        
+        if user_request.lower() in ["exit", "quit", "bye"]:
+            print("Cook-Bot: Goodbye! Happy cooking!")
+            break
+        
+        response = get_cookbot_response(user_request)
+        print(f"Cook-Bot: {response}\n")
+
+def simulate_chat():
+    print("Welcome to Cook-Bot! Simulating user questions...\n")
+    
+    simulated_user_requests = [
+        "How do I make spaghetti?",
+        "Tell me a recipe for apple pie.",
+        "What goes well with roasted chicken?",
+        "How long should I bake cookies?",
+        "Can you suggest a vegetarian dish?",
+    ]
+    
+    for user_request in simulated_user_requests:
+        print(f"User: {user_request}")
+        response = get_cookbot_response(user_request)
+        print(f"Cook-Bot: {response}\n")
+    
+    print("Simulation complete!")
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Run Cook-Bot in different modes.")
+    parser.add_argument("-i", "--interactive", help="Run in interactive chat mode", action="store_true")
+    args = parser.parse_args()
+
+    if args.interactive:
+        interactive_chat()
+    else:
+        simulate_chat()
