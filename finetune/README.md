@@ -7,4 +7,5 @@
 - parallelize with Python multiprocessing
 - batch / no batch / batch size
 - gradient accumulation
+- use a profiler
 - design a custom chip and write your own CUDA kernel 🤡

@@ -1,3 +1,4 @@
+## epochs=3
 ### A100 80GB, 1 CPU, 8GB RAM
 ```
 FIRST RUN:
@@ -30,4 +31,23 @@ Best by evaluation loss:
 
 Best by training runtime:
 {'hyperparams': {'learning_rate': 2e-05, 'per_device_train_batch_size': 3, 'num_train_epochs': 3, 'weight_decay': 0.05, 'gradient_accumulation_steps': 4}, 'eval_loss': 5.724299430847168, 'elapsed_time': 2.3930389881134033, 'train_runtime': 1.2962}
+```
+
+## epochs=100
+### A100 80GB, 1 CPU, 8GB RAM
+```
+FIRST RUN:
+ELAPSED TIME finetune.py:
+end_time - start_time=22.06116247177124
+eval_loss=5.120893478393555
+train_runtime=15.0842
+
+
+Best by evaluation loss:
+{'hyperparams': {'learning_rate': 2e-05, 'per_device_train_batch_size': 4, 'per_device_eval_batch_size': 1, 'num_train_epochs': 100, 'weight_decay': 0.05, 'gradient_accumulation_steps': 3}, 'eval_loss': 4.990418434143066, 'elapsed_time': 13.642078161239624, 'train_runtime': 13.0581}
+
+Best by training runtime:
+{'hyperparams': {'learning_rate': 2e-05, 'per_device_train_batch_size': 3, 'per_device_eval_batch_size': 1, 'num_train_epochs': 100, 'weight_decay': 0.01, 'gradient_accumulation_steps': 4}, 'eval_loss': 5.177789688110352, 'elapsed_time': 12.261210441589355, 'train_runtime': 11.6903}
+
+
 ```

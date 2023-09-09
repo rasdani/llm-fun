@@ -9,7 +9,6 @@ from finetune import preprocess_function
 def grid_search_finetune(hyperparam_grid):
     results = []
     
-    # Define the tokenizer and dataset outside the loop to avoid reloading them multiple times
     tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
     my_dataset = load_dataset('json', data_files='processed_data.json')
     train_test_split = my_dataset["train"].train_test_split(test_size=0.2)
@@ -52,7 +51,6 @@ def grid_search_finetune(hyperparam_grid):
         # Extract training runtime from trainer logs
         train_runtime = [entry.get("train_runtime") for entry in trainer.state.log_history if "train_runtime" in entry][0]
         
-        # Store results
         results.append({
             "hyperparams": current_hyperparams, 
             "eval_loss": eval_loss, 
@@ -67,7 +65,9 @@ hyperparam_grid = {
     # 'learning_rate': [2e-5, 3e-5],
     'learning_rate': [2e-5],
     'per_device_train_batch_size': [1, 2, 3, 4],
-    'num_train_epochs': [3],
+    'per_device_eval_batch_size': [1],
+    # 'num_train_epochs': [3],
+    'num_train_epochs': [100],
     'weight_decay': [0.01, 0.05],
     'gradient_accumulation_steps': [1, 2, 3, 4]
 }

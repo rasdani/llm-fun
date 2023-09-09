@@ -14,6 +14,8 @@ pipeline = transformers.pipeline(
 )
 
 def format_prompt(user_message, system_prompt):
+    """This is the prompt template, that chat fine-tuning was done with."""
+
     template = """
     <s>[INST] <<SYS>>
     {system_prompt}

@@ -84,11 +84,11 @@ training_args = TrainingArguments(
     output_dir="my_awesome_qa_model",
     evaluation_strategy="epoch",
     learning_rate=2e-5,
-    per_device_train_batch_size=16,
+    per_device_train_batch_size=16, # results in a single batch?
     per_device_eval_batch_size=16,
-    num_train_epochs=3,
+    num_train_epochs=100,
     weight_decay=0.01,
-    push_to_hub=True,
+    # push_to_hub=True,
 )
 
 trainer = Trainer(
