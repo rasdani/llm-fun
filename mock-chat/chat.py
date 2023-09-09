@@ -18,23 +18,56 @@ def update_prompt(prompt, user_request, cookbot_response):
     updated_prompt = f"{prompt}\n    User: {user_request}\n    Cook-Bot: {cookbot_response}"
     return updated_prompt
 
+# def get_cookbot_response(prompt, user_request):
+#     formatted_prompt = f"{prompt}\n    User: {user_request}\n    Cook-Bot:"
+    
+#     sequences = pipeline(
+#         formatted_prompt,
+#         do_sample=True,
+#         top_k=10,
+#         num_return_sequences=1,
+#         max_length=2000,
+#     )
+
+#     text = sequences[0]['generated_text']
+
+#     # Extract Cook-Bot's response after the user_request
+#     start_pos = text.find(f"User: {user_request}") + len(f"User: {user_request}")
+#     end_pos = text.find("User:", start_pos)
+#     cookbot_response = text[start_pos:end_pos].replace("Cook-Bot:", "").strip()
+
+#     return cookbot_response
+
 def get_cookbot_response(prompt, user_request):
     formatted_prompt = f"{prompt}\n    User: {user_request}\n    Cook-Bot:"
     
-    sequences = pipeline(
-        formatted_prompt,
-        do_sample=True,
-        top_k=10,
-        num_return_sequences=1,
-        max_length=2000,
-    )
+    # Initialize an empty response
+    cookbot_response = ""
 
-    text = sequences[0]['generated_text']
+    # Try to generate a response up to 3 times
+    for _ in range(3):
+        sequences = pipeline(
+            formatted_prompt,
+            do_sample=True,
+            top_k=10,
+            num_return_sequences=1,
+            max_length=2000,
+        )
 
-    # Extract Cook-Bot's response after the user_request
-    start_pos = text.find(f"User: {user_request}") + len(f"User: {user_request}")
-    end_pos = text.find("User:", start_pos)
-    cookbot_response = text[start_pos:end_pos].replace("Cook-Bot:", "").strip()
+        text = sequences[0]['generated_text']
+
+        # Extract Cook-Bot's response after the user_request
+        start_pos = text.find(f"User: {user_request}") + len(f"User: {user_request}")
+        end_pos = text.find("User:", start_pos)
+        cookbot_response = text[start_pos:end_pos].replace("Cook-Bot:", "").strip()
+
+        # If we successfully extracted a response, break out of the loop
+        if cookbot_response:
+            break
+
+    # If after 3 attempts we still couldn't extract a valid response, return an error message
+    if not cookbot_response:
+        cookbot_response = "Sorry, I'm having trouble generating a response. Please try again."
 
     return cookbot_response
 
@@ -62,8 +95,8 @@ def simulate_chat(prompt):
     
     simulated_user_requests = [
         "What goes well with roasted chicken?",
-        "How long should I bake cookies?",
-        "Can you suggest a vegetarian dish?"
+        "Not my vibe. Do you have an alternative?",
+        "Great! Can you come up with a nice name for the overall dish?"
     ]
     
     for user_request in simulated_user_requests:
@@ -82,7 +115,7 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--interactive", help="Run in interactive chat mode", action="store_true")
     args = parser.parse_args()
 
-    prompt = """Only generate Cook-Bot's response based on the latest User's question. 
+    prompt = """Only generate Cook-Bot's response based on the latest User's question. Respond sucinctly and clearly.
 
     User: What's a quick breakfast recipe?
     Cook-Bot: A quick breakfast idea is a yogurt parfait. Layer Greek yogurt, granola, and fresh berries in a glass. Drizzle with honey for added sweetness. Enjoy!
