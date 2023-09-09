@@ -1,0 +1,282 @@
+[
+    {
+        "id": "kauz.net_1",
+        "title": "Eingebautes Sprachverständnis",
+        "context": "Chatbots von Kauz basieren auf tiefer linguistischer Modellierung (NLU). Dadurch verstehen sie mehr Fragen und geben spezifischere Antworten. Dies erreichen sie durch eine umfassende Ontologie, tiefe semantische Analysen und eine Vielzahl eingebauter Analysealgorithmen.",
+        "question": "Worauf basieren sich die Chatbots von Kauz?",
+        "answers": {
+            "text": [
+                "auf tiefer linguistischer Modellierung (NLU)"
+            ],
+            "answer_start": [
+                27
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_2",
+        "title": "Die Vorteile von Kauz Hybrid auf einen Blick",
+        "context": "Schnellere Contenterstellung mit ChatGPT\\n- Hohe Antwortquote durch hauseigene NLU-Engine\\n- Datenverarbeitung auf europäischen Servern dank Microsoft Azure Cloud\\n- Einsetzbar für Kundenservice auf Webseiten und Apps oder im Mitarbeiterservice (Dokumentensuche)\\n- Leichter Einstieg mit einem Workshop und PoC",
+        "question": "Wodurch funktioniert die hohe Antwortquote?",
+        "answers": {
+            "text": [
+                "durch hauseigene NLU-Engine"
+            ],
+            "answer_start": [
+                62
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_3",
+        "title": "Der laufende Betrieb",
+        "context": "Bei der Set-Up-Phase rechnet man in der Regel mit einem Zeitraum von drei Monaten. Jedoch sollte man berücksichtigen, dass es wie bei jedem Projekt zu unvorhersehbaren Ereignissen kommen kann, welche den Live-Gang verzögern können.",
+        "question": "Mit welchem Zeitraum rechnet man bei der Set-Up-Phase?",
+        "answers": {
+            "text": [
+                "mit einem Zeitraum von drei Monaten"
+            ],
+            "answer_start": [
+                46
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_4",
+        "title": "Ziele von Kauz",
+        "context": "Kauz ist ein Startup aus Düsseldorf-Bilk. Das Ziel von Kauz:\\nDie besten deutschsprachigen Chatbots mit echtem Sprachverständnis zu entwickeln. Dies erreichen wir durch eine umfassende Ontologie und tiefe semantische Analysen. Unser Entwicklungsteam besteht aus Linguist*innen, Computerlinguist*innen und Softwareentwickler*innen.",
+        "question": "Was ist Kauz?",
+        "answers": {
+            "text": [
+                "ein Startup aus Düsseldorf-Bilk"
+            ],
+            "answer_start": [
+                9
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_5",
+        "title": "Technologie",
+        "context": "Bei der Technologie, die dem Chatbot zugrunde liegt, unterscheidet man in der Regel zwischen Machine-Learning und NLU. Für Chatbots ist NLU die weitaus geeignetere Technologie, diese wird aber bisher nur selten eingesetzt.",
+        "question": "Welche zwei Technologien liegen dem Chatbot zugrunde?",
+        "answers": {
+            "text": [
+                "Machine-Learning und NLU"
+            ],
+            "answer_start": [
+                93
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_6",
+        "title": "Vorteile von NLU",
+        "context": "Ein weiterer Vorteil des Einsatzes von NLU ist die Variabilität. Da Ihr NLU-Chatbot nicht nur nach einzelnen Begriffen sucht, kann er auch unterschiedliche Formulierungen verstehen. Um das zu erreichen, muss zwingend der gesamte Satz in einen Zusammenhang gesetzt werden, da nur der Fokus auf ein Schlüsselwort nicht zu einem befriedigenden Ergebnis führen würde. Dabei wird klar, wie wichtig das Erkennen von Bezugswörtern wie “mein” und “dein” im Kontext sein kann.",
+        "question": "Was ist ein Vorteil des Einsatzes von NLU?",
+        "answers": {
+            "text": [
+                "die Variabilität"
+            ],
+            "answer_start": [
+                47
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_7",
+        "title": "Virtuelle Shop-Assistenten",
+        "context": "Virtuelle Shop-Assistenten führen Kunden im Kaufprozess zielsicher zum Abschluss. Die Kunden erhalten einen Überblick mit Produktvergleich und helfen bei Problemen mit der Bestellung.",
+        "question": "Was machen die virtuellen Shop-Assistenten?",
+        "answers": {
+            "text": [
+                "führen Kunden im Kaufprozess zielsicher zum Abschluss"
+            ],
+            "answer_start": [
+                27
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_8",
+        "title": "Kundenzufriedenheit",
+        "context": "Der ausschlaggebende Punkt für die Wirtschaftlichkeit und gleichzeitig auch die Kundenzufriedenheit ist die Antwortquote eines Chatbots.",
+        "question": "Was ist ausschlaggebend für die Kundenzufriedenheit?",
+        "answers": {
+            "text": [
+                "die Antwortquote eines Chatbots"
+            ],
+            "answer_start": [
+                104
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_9",
+        "title": "KI",
+        "context": "Bei KI geht es darum, menschliche Intelligenz nachzubilden. Dabei kommen verschiedene Techniken zum Einsatz, insbesondere sprachbasierte / linguistische Techniken und statistische Techniken wie Machine Learning und speziell neuronale Netze.",
+        "question": "Wie bildet KI menschliche Intelligenz nach?",
+        "answers": {
+            "text": [
+                "Dabei kommen verschiedene Techniken zum Einsatz, insbesondere sprachbasierte / linguistische Techniken und statistische Techniken wie Machine Learning und speziell neuronale Netze."
+            ],
+            "answer_start": [
+                60
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_10",
+        "title": "Chatbot Studie",
+        "context": "In der vorigen Chatbot Studie “Conversational Business 2020 – Status Quo und Trends” wurden 600 Konsumenten zur Akzeptanz von Chatbots befragt. Die Erkenntnisse zeigen, dass Chatbots häufig noch zu sehr aus der Perspektive der Kostenersparnis und Prozessautomatisierung und nicht der Kundenperspektive entwickelt werden. Kunden begrüßen Chatbots prinzipiell, wenn die Antwortqualität akzeptabel ist. Doch viele Konsumenten sind frustriert in ihren Chatbot-Erfahrungen und meiden sie deshalb. Ein schlechter Chatbot ist somit kontraproduktiv für die Customer Experience. Das legt die Empfehlung nahe: Lieber keinen Chatbot als einen schlechten Chatbot. Auf der anderen Seite berichten Unternehmen, die Chatbots mit einer hohen Antwortquote einsetzen, von sehr positiven Erfahrungen.",
+        "question": "Wann sind Kunden mit Chatbots zufrieden?",
+        "answers": {
+            "text": [
+                "wenn die Antwortqualität akzeptabel ist"
+            ],
+            "answer_start": [
+                359
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_11",
+        "title": "Pflegeaufwand",
+        "context": "Hauptsächlich hängt der Pflegeaufwand des Chatbots davon ab, wie oft Informationen sich ändern oder geändert werden müssen. Die Änderungshäufigkeit der Informationsbasis wird wesentlich von den Kunden beeinflusst. Manche Unternehmen haben einen sehr stabilen Änderungsbedarf, bei anderen fallen täglich oder sogar stündlich Änderungen an. Je höher die Änderungshäufigkeit, desto höher liegt logischerweise auch der Aufwand. Hat man allerdings recht statische Informationen, hält sich der Aufwand in Grenzen.",
+        "question": "Wovon hängt der Pflegeaufwand des Chatbots ab?",
+        "answers": {
+            "text": [
+                "Hauptsächlich hängt der Pflegeaufwand des Chatbots davon ab, wie oft Informationen sich ändern oder geändert werden müssen."
+            ],
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_12",
+        "title": "Dienstleistungen",
+        "context": "Bürgerinnen und Bürger können sich mit einem Chatbot von Kauz schnell und jederzeit mehrsprachige Informationen über ihre Stadt und deren Dienstleistungen einholen, Formulare einreichen und Termine vereinbaren.",
+        "question": "Was kann man mit einem Chatbot von Kauz machen?",
+        "answers": {
+            "text": [
+                "schnell und jederzeit mehrsprachige Informationen über ihre Stadt und deren Dienstleistungen einholen, Formulare einreichen und Termine vereinbaren."
+            ],
+            "answer_start": [
+                62
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_13",
+        "title": "OpenKauz",
+        "context": "Der hybride Bot OpenKauz erleichtert die Implementierung des Chatbots und ermöglicht eine deutlich schnellere Contentcreation. Mit Hilfe von ChatGPT übernehmen wir die Informationen von Ihrer Website automatisch in die Wissensdatenbank des Chatbots. Aus dieser Datenbank generiert ChatGPT dann die passenden Antworten.",
+        "question": "Woraus generiert ChatGPT die passenden Antworten?",
+        "answers": {
+            "text": [
+                "Wissensdatenbank des Chatbots"
+            ],
+            "answer_start": [
+                219
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_14",
+        "title": "Softwarelösung",
+        "context": "Ein Chatbot ist eine Softwarelösung, die Künstliche Intelligenz verwendet, um sich mit Menschen in natürlicher Sprache zu unterhalten. Benutzer:innen können Fragen stellen, auf die das System in natürlicher Sprache antwortet. Er kann Texteingabe, Audioeingabe oder beides unterstützen.",
+        "question": "Was ist ein Chatbot?",
+        "answers": {
+            "text": [
+                "Ein Chatbot ist eine Softwarelösung, die Künstliche Intelligenz verwendet, um sich mit Menschen in natürlicher Sprache zu unterhalten."
+            ],
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_15",
+        "title": "Verfügbarkeit",
+        "context": "Ein Chatbot ist rund und um die Uhr und an jedem Tag der Woche verfügbar. Er kann jederzeit sehr schnell beraten, wird sich aber tendenziell eher auf einfachere Fragestellungen konzentrieren.",
+        "question": "Ist der Chatbot auch nachts verfügbar?",
+        "answers": {
+            "text": [
+                "Ein Chatbot ist rund und um die Uhr und an jedem Tag der Woche verfügbar."
+            ],
+            "answer_start": [
+                0
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_16",
+        "title": "Freitext-Kommunikation",
+        "context": "Wir von Kauz favorisieren die Freitext-Kommunikation. Diese Art der automatisierten Kommunikation entspricht der menschlichen und gibt den Nutzenden die Möglichkeit, ihre Anliegen so zu formulieren, wie sie es im Kopf haben. Sie müssen nicht erst ihre Fragestellung „in Schubladen“ transformieren. Dies ist natürlich, menschlich und kundenorientiert.",
+        "question": "Warum favorisiert Kauz die Freitext-Kommunikation?",
+        "answers": {
+            "text": [
+                "Diese Art der automatisierten Kommunikation entspricht der menschlichen und gibt den Nutzenden die Möglichkeit, ihre Anliegen so zu formulieren, wie sie es im Kopf haben. Sie müssen nicht erst ihre Fragestellung „in Schubladen“ transformieren. Dies ist natürlich, menschlich und kundenorientiert."
+            ],
+            "answer_start": [
+                54
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_17",
+        "title": "Qualität",
+        "context": "Chatbots haben unterschiedliche Qualitäten. Wünschen Sie einen Chatbot, der wenig kostet, dann kann es sein, dass Sie hohe Ressourcen in die Entwicklung investieren, was dann doch teuer wird. Wünschen Sie einen hochwertigen Chatbot, der Ihren Kundenservice effizient entlastet und schnell einsatzbereit ist, können Sie auch hier zwischen verschiedenen Chatbot Typen wählen.",
+        "question": "Kann ich einen Chatbot haben, der wenig kostet?",
+        "answers": {
+            "text": [
+                "Dann kann es sein, dass Sie hohe Ressourcen in die Entwicklung investieren, was dann doch teuer wird"
+            ],
+            "answer_start": [
+                -1
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_18",
+        "title": "Kommunikation",
+        "context": "Die Kommunikation wird entweder durch Ihren Chatbot initiiert oder wird durch den Kunden durch die Eingabe auf Ihrer Webseite oder über den Facebook Messenger gestartet. Sobald Ihr Chatbot die Frage oder Aussage erhält, läuft der Vorgang des Verstehens und Einordnens an, um anschließend das Ergebnis in der angeschlossenen Datenbank zu suchen. Die Antwort ist entweder eine Aussage oder eine Auswahlmöglichkeit, je nach vorhergehender Eingabe. Manchmal muss Ihr Chatbot natürlich auch einmal genauer nachfragen, falls es eine Anfrage mit vielen verschiedenen Interpretationen war.",
+        "question": "Was passiert, wenn der Chatbot die Frage oder Aussage erhält?",
+        "answers": {
+            "text": [
+                "Läuft der Vorgang des Verstehens und Einordnens an, um anschließend das Ergebnis in der angeschlossenen Datenbank zu suchen"
+            ],
+            "answer_start": [
+                -1
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_19",
+        "title": "Vergleichsstudie",
+        "context": "In Kooperation mit der Heinrich-Heine-Universität Düsseldorf wurde von Kauz eine Vergleichsstudie über die Qualität von virtuellen Assistenten durchgeführt. Ziel der Studie war es, zu ermitteln, wie der Chatbot Carla im Vergleich mit anderen aktuellen virtuellen Assistenten und Chatbots auf dem deutschsprachigen Markt abschneidet. Verglichen wurde Carla von Kauz Linguistic Technologies mit der Assistentin Jana, welche auf der Webseite der E-Post Auskunft gibt und Clara, die auf der Seite vom Versandhaus Otto zu finden ist.",
+        "question": "Was war das Ziel der Vergleichsstudie?",
+        "answers": {
+            "text": [
+                "Zu ermitteln, wie der Chatbot Carla im Vergleich mit anderen aktuellen virtuellen Assistenten und Chatbots auf dem deutschsprachigen Markt abschneidet."
+            ],
+            "answer_start": [
+                -1
+            ]
+        }
+    },
+    {
+        "id": "kauz.net_20",
+        "title": "Kombination aus ChatGPT und Kauz-NLU",
+        "context": "Kauz kann die Vorteile von generativer und kontrollierter KI kombinieren. Mit einem hybriden Chatbot können Sie kundenspezifische Daten einbinden, spezifische Konversationen gestalten und sich die Vorteile von ChatGPT zu eigen machen. Die Kombination aus ChatGPT und Kauz-NLU sorgt dafür, dass sie mit weniger Aufwand mehr richtige Antworten erreichen.",
+        "question": "Was kann Kauz?",
+        "answers": {
+            "text": [
+                "Kauz kann die Vorteile von generativer und kontrollierter KI kombinieren."
+            ],
+            "answer_start": [
+                0
+            ]
+        }
+    }
+]
