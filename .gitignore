@@ -1,3 +1,4 @@
 Llama-2-7b-hf
-run.slurm
+my_awesome_qa_model
+*.slurm
 *.out

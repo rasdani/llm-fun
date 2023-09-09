@@ -1,4 +1,5 @@
 from transformers import AutoTokenizer
+from datasets import load_dataset
 
 tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
 
@@ -52,4 +53,61 @@ def preprocess_function(examples):
 
     inputs["start_positions"] = start_positions
     inputs["end_positions"] = end_positions
-    return input
+    return inputs
+
+
+
+my_dataset = load_dataset('json', data_files='processed_data.json')
+# print(f"{my_dataset=}")
+# for d in my_dataset['train']:
+#     print(f"{d=}")
+# train_set = my_dataset["train"][:16]
+# test_set = my_dataset["train"][16:]
+train_test_split = my_dataset["train"].train_test_split(test_size=0.2)  # 80% train, 20% test
+train_set = train_test_split["train"]
+test_set = train_test_split["test"]
+print(f"{train_set=}")
+print(f"{test_set=}")
+
+# tokenized_data = my_dataset.map(preprocess_function, batched=True, remove_columns=my_dataset["train"].column_names)
+tokenized_train_set = train_set.map(preprocess_function, batched=True, remove_columns=my_dataset["train"].column_names)
+tokenized_test_set = test_set.map(preprocess_function, batched=True, remove_columns=my_dataset["train"].column_names)
+# for train in tokenized_train_set:
+#     print(f"{train=}")
+# for test in tokenized_test_set:
+#     print(f"{test=}")
+
+from transformers import DefaultDataCollator
+
+data_collator = DefaultDataCollator()
+
+from transformers import AutoModelForQuestionAnswering, TrainingArguments, Trainer
+
+model = AutoModelForQuestionAnswering.from_pretrained("distilbert-base-uncased")
+
+model = model.to('cuda')
+print(f"{model.device=}")
+
+training_args = TrainingArguments(
+    output_dir="my_awesome_qa_model",
+    evaluation_strategy="epoch",
+    learning_rate=2e-5,
+    per_device_train_batch_size=16,
+    per_device_eval_batch_size=16,
+    num_train_epochs=3,
+    weight_decay=0.01,
+    push_to_hub=True,
+)
+
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=tokenized_train_set,
+    eval_dataset=tokenized_test_set,
+    tokenizer=tokenizer,
+    data_collator=data_collator,
+)
+
+trainer.train()
+
+trainer.push_to_hub()
