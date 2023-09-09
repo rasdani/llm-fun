@@ -67,8 +67,8 @@ train_set = train_test_split["train"]
 test_set = train_test_split["test"]
 
 # tokenized_data = my_dataset.map(preprocess_function, batched=True, remove_columns=my_dataset["train"].column_names)
-tokenized_train_set = train_set.map(preprocess_function, batched=True, remove_columns=my_dataset["train"].column_names)
-tokenized_test_set = test_set.map(preprocess_function, batched=True, remove_columns=my_dataset["train"].column_names)
+tokenized_train_set = train_set.map(preprocess_function, batched=True, remove_columns=my_dataset["train"].column_names, num_proc=4)
+tokenized_test_set = test_set.map(preprocess_function, batched=True, remove_columns=my_dataset["train"].column_names, num_proc=4)
 
 
 data_collator = DefaultDataCollator()
@@ -106,7 +106,7 @@ eval_loss = metrics["eval_loss"]
 end_time = time.time()
 
 
-print("ELAPSED TIME finetune.py:")
+print("ELAPSED TIME finetune_token_parallel.py:")
 print(f"{end_time - start_time=}")
 print(f"{eval_loss=}")
 for entry in trainer.state.log_history:

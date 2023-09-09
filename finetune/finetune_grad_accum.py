@@ -84,11 +84,12 @@ training_args = TrainingArguments(
     output_dir="my_awesome_qa_model",
     evaluation_strategy="epoch",
     learning_rate=2e-5,
-    per_device_train_batch_size=16,
-    per_device_eval_batch_size=16,
+    per_device_train_batch_size=1,
+    per_device_eval_batch_size=1,
     num_train_epochs=3,
     weight_decay=0.01,
-    push_to_hub=True,
+    # push_to_hub=True,
+    # gradient_accumulation_steps=2,
 )
 
 trainer = Trainer(
@@ -113,5 +114,6 @@ for entry in trainer.state.log_history:
     if "train_runtime" in entry:
         train_runtime = entry["train_runtime"]
         print(f"{train_runtime=}")
+print(f"{training_args=}")
 
 # trainer.push_to_hub()
